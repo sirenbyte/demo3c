@@ -14,7 +14,10 @@ import java.io.IOException;
 public class MessageController {
     @PostMapping
     public String AnswerWebhook(@RequestBody WebHookDto hook) throws IOException {
-        for (SecondaryDto message : hook.getMessages()) {
+        System.out.println(hook);
+        return "ok";
+    }
+        /*for (SecondaryDto message : hook.getMessages()) {
             if (message.getFromMe())
                 continue;
             String option = message.getBody().split(" ")[0].toLowerCase();
@@ -22,7 +25,7 @@ public class MessageController {
                 case "chatid":
                     ApiWA.sendChatId(message.getChatId());
                     break;
-             /*   case "file":
+             *//*   case "file":
                     var texts = message.getBody().split(" ");
                     if (texts.length > 1)
                         ApiWA.sendFile(message.getChatId(), texts[1]);
@@ -38,10 +41,10 @@ public class MessageController {
                     break;
                 default:
                     ApiWA.sendDefault(message.getChatId());
-                    break;*/
+                    break;*//*
 
             }
         }
         return "ok";
-    }
+    }*/
 }

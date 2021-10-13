@@ -2,6 +2,7 @@ package com.example.demo.dto;
 
 
 import com.fasterxml.jackson.annotation.*;
+import lombok.ToString;
 
 import javax.annotation.Generated;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ import java.util.Map;
         "messageNumber"
 })
 @Generated("jsonschema2pojo")
+@ToString
 public class SecondaryDto {
 
     @JsonProperty("id")

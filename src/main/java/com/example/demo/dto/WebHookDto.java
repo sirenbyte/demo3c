@@ -1,6 +1,7 @@
 package com.example.demo.dto;
 
 import com.fasterxml.jackson.annotation.*;
+import lombok.ToString;
 
 import javax.annotation.Generated;
 import java.util.HashMap;
@@ -13,6 +14,7 @@ import java.util.Map;
         "messages"
 })
 @Generated("jsonschema2pojo")
+@ToString
 public class WebHookDto {
 
     @JsonProperty("instanceId")
