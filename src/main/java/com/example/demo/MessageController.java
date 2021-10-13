@@ -14,37 +14,14 @@ import java.io.IOException;
 public class MessageController {
     @PostMapping
     public String AnswerWebhook(@RequestBody WebHookDto hook) throws IOException {
-        System.out.println(hook);
-        return "ok";
-    }
-        /*for (SecondaryDto message : hook.getMessages()) {
-            if (message.getFromMe())
-                continue;
+        for (SecondaryDto message : hook.getMessages()) {
             String option = message.getBody().split(" ")[0].toLowerCase();
             switch (option) {
                 case "chatid":
                     ApiWA.sendChatId(message.getChatId());
                     break;
-             *//*   case "file":
-                    var texts = message.getBody().split(" ");
-                    if (texts.length > 1)
-                        ApiWA.sendFile(message.getChatId(), texts[1]);
-                    break;
-                case "ogg":
-                    ApiWA.sendOgg(message.getChatId());
-                    break;
-                case "geo":
-                    ApiWA.sendGeo(message.getChatId());
-                    break;
-                case "group":
-                    ApiWA.createGroup(message.getAuthor());
-                    break;
-                default:
-                    ApiWA.sendDefault(message.getChatId());
-                    break;*//*
-
             }
         }
         return "ok";
-    }*/
+    }
 }
