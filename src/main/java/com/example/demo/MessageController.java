@@ -18,7 +18,7 @@ public class MessageController {
             String option = message.getBody().split(" ")[0].toLowerCase();
             switch (option) {
                 case "chatid":
-                    ApiWA.sendChatId(message.getChatId());
+                    ApiWA.sendChatId(message.getAuthor());
                     break;
             }
         }
