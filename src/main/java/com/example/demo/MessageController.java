@@ -15,12 +15,8 @@ public class MessageController {
     @PostMapping
     public String AnswerWebhook(@RequestBody WebHookDto hook) throws IOException {
         for (SecondaryDto message : hook.getMessages()) {
-            String option = message.getBody().split(" ")[0].toLowerCase();
-            switch (option) {
-                case "chatid":
-                    ApiWA.sendChatId(message.getAuthor());
-                    break;
-            }
+            System.out.println("Kirdi: " + hook);
+            ApiWA.sendChatId(message.getAuthor());
         }
         return "ok";
     }
