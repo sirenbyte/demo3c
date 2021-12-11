@@ -12,8 +12,8 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ApiWA {
-    private static String APIURL = "https://api.chat-api.com/instance349935/";
-    private static String TOKEN = "bx42ajb69sicogud";
+    private static String APIURL = "https://api.chat-api.com/instance381903/";
+    private static String TOKEN = "lgh32njby8wde0oo";
 
 
     public static CompletableFuture<Void> postJSON(URI uri, Map<String, String> map) throws IOException {
